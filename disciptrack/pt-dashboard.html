@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT Teacher Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<link rel="stylesheet" href="disciptrack-style.css">
+<body>
+    <h1>PT Teacher Dashboard</h1>
+
+    <div class="form-group">
+        <label for="rollNumber">Roll Number</label>
+        <input type="text" id="rollNumber">
+    </div>
+    <div class="form-group">
+        <label for="studentName">Student Name</label>
+        <input type="text" id="studentName">
+    </div>
+    <div class="form-group">
+        <label for="studentClass">Class</label>
+        <input type="text" id="studentClass">
+    </div>
+    <div class="form-group">
+        <label for="section">Section</label>
+        <input type="text" id="section">
+    </div>
+    <div class="form-group">
+        <label for="issue">Description of Issue</label>
+        <textarea id="issue"></textarea>
+    </div>
+    <button id="addRecord">Add Record</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Roll Number</th>
+                <th>Student Name</th>
+                <th>Class</th>
+                <th>Section</th>
+                <th>Issue</th>
+                <th>Mark</th>
+                <th>Red Mark Count</th>
+            </tr>
+        </thead>
+        <tbody id="recordTableBody">
+            <!-- Records will appear here -->
+        </tbody>
+    </table>
+
+    <script src="pt-dashboard.js"></script>
+</body>
+</html>

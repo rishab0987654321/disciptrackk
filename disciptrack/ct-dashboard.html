@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Teacher Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        textarea {
+            width: 100%;
+            height: 60px;
+        }
+        button {
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .filter {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<link rel="stylesheet" href="disciptrack-style.css">
+<body>
+    <h1>Class Teacher Dashboard</h1>
+
+    <div class="filter">
+        <label for="filterClass">Select Class: </label>
+        <input type="text" id="filterClass" placeholder="e.g., 10">
+        <label for="filterSection">Select Section: </label>
+        <input type="text" id="filterSection" placeholder="e.g., A">
+        <button onclick="applyFilter()">Apply Filter</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Roll Number</th>
+                <th>Student Name</th>
+                <th>Class</th>
+                <th>Section</th>
+                <th>Issue</th>
+                <th>Red Mark Count</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="ctTableBody">
+            <!-- Records will appear here -->
+        </tbody>
+    </table>
+
+    <script src="ct-dashboard.js"></script>
+</body>
+</html>
